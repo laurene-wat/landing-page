@@ -27,9 +27,9 @@ const App: React.FC = () => {
                 <div className="absolute -inset-1 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-200"></div>
                 <button className="relative flex items-center bg-main text-cream pl-3 pr-6 py-2 rounded-full gap-3 hover:scale-105 transition-transform duration-300 text-left shadow-xl">
                   <img 
-                    src="./avatar.jpg" 
-                    alt="Avatar" 
-                    className="w-9 h-9 rounded-full border-2 border-cream/20"
+                  src="/assets/images/avatar.jpg" 
+                  alt="Avatar" 
+                  className="w-9 h-9 rounded-full border-2 border-cream/20"
                   />
                   <div className="flex flex-col">
                     <span className="font-medium tracking-tight text-sm">Discussons-en</span>
@@ -43,12 +43,13 @@ const App: React.FC = () => {
           {/* Logos */}
           <div className="w-full pb-6 pt-0 mt-auto overflow-hidden">
             <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center">
-               <img src="./make-full-logo.svg" alt="Make" className="h-6 md:h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-               <img src="./n8n-full-logo.svg" alt="n8n" className="h-6 md:h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-               <img src="./vitally-full-logo.svg" alt="Vitally" className="h-6 md:h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-               <img src="./hubspot-full-logo.svg" alt="HubSpot" className="h-6 md:h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-               <img src="./zendesk-full-logo.png" alt="Zendesk" className="h-6 md:h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-               <img src="./airtable-full-logo.svg" alt="Airtable" className="h-6 md:h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+              <img src="/assets/images/make-full-logo.svg" alt="Make" className="h-6 md:h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+              <img src="/assets/images/n8n-full-logo.svg" alt="n8n" className="h-6 md:h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+              <img src="/assets/images/vitally-full-logo.svg" alt="Vitally" className="h-6 md:h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+              <img src="/assets/images/hubspot-full-logo.svg" alt="HubSpot" className="h-6 md:h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+              <img src="/assets/images/zendesk-full-logo.png" alt="Zendesk" className="h-6 md:h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+              <img src="/assets/images/airtable-full-logo.svg" alt="Airtable" className="h-6 md:h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+
             </div>
           </div>
         </section>
@@ -375,9 +376,9 @@ const App: React.FC = () => {
               <div className="lg:col-span-5 flex justify-center lg:sticky lg:top-24">
                 <div className="relative w-4/5 max-w-sm">
                    <img 
-                      src="./laurene.jpg" 
-                      alt="Laurène Watrelot sur scène"
-                      className="relative rounded-xl w-full object-cover aspect-[4/5] grayscale hover:grayscale-0 transition-all duration-500 border-4 border-white rotate-2 shadow-[0_1px_4px_0_rgba(0,0,0,0.1)]" 
+                   src="/assets/images/laurene.jpg" 
+                   alt="Laurène Watrelot sur scène"
+                   className="relative rounded-xl w-full object-cover aspect-[4/5] grayscale hover:grayscale-0 transition-all duration-500 border-4 border-white rotate-2 shadow-[0_1px_4px_0_rgba(0,0,0,0.1)]" 
                    />
                 </div>
               </div>
