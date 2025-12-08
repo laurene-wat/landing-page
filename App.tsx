@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Marquee from './components/Marquee';
 import SectionHeader from './components/SectionHeader';
@@ -14,9 +15,9 @@ const App: React.FC = () => {
         
         {/* --- Hero Section --- */}
         <section className="flex flex-col items-center text-center mt-12 mb-20 space-y-8">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light font-serif leading-tight max-w-5xl tracking-[-0.04em]">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-normal font-serif leading-tight max-w-5xl tracking-[-0.04em] text-main">
             Je structure vos opérations pour que vos CSM se concentrent sur ce qui compte :{" "}
-            <span className="font-serif italic font-normal tracking-[-0.04em]">vos clients</span>
+            <span className="font-serif italic font-normal tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-r from-[#FE6502] via-[#6A41BA] to-[#127CAE] pr-2">vos clients</span>
           </h1>
 
           <div className="flex flex-col items-center space-y-4 mt-8">
@@ -25,7 +26,7 @@ const App: React.FC = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-200"></div>
               <button className="relative flex items-center bg-main text-cream pl-2 pr-6 py-2 rounded-full space-x-3 hover:scale-105 transition-transform duration-300">
                 <img 
-                  src="https://picsum.photos/id/64/100/100" 
+                  src="./avatar.jpg" 
                   alt="Avatar" 
                   className="w-8 h-8 rounded-full border-2 border-cream/20"
                 />
@@ -137,94 +138,107 @@ const App: React.FC = () => {
 
         </section>
 
-        {/* --- About Section --- */}
+        {/* --- About Section (Mixed with Conferences/Podcasts) --- */}
         <section className="mb-24">
-           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               {/* Photo */}
-              <div className="lg:col-span-5 relative group">
-                 <div className="absolute inset-0 bg-main rounded-xl transform rotate-[-3deg] translate-x-2 translate-y-2 transition-transform group-hover:rotate-[-1deg]"></div>
-                 <img 
-                    src="./laurene.jpg" 
-                    alt="Laurène Watrelot sur scène"
-                    className="relative rounded-xl shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500 w-full object-cover aspect-[4/5] grayscale hover:grayscale-0" 
-                 />
+              <div className="lg:col-span-5 flex justify-center lg:sticky lg:top-24">
+                <div className="relative w-4/5 max-w-sm">
+                   <img 
+                      src="./laurene.jpg" 
+                      alt="Laurène Watrelot sur scène"
+                      className="relative rounded-xl w-full object-cover aspect-[4/5] grayscale hover:grayscale-0 transition-all duration-500 border-4 border-white rotate-2 shadow-[0_1px_4px_0_rgba(0,0,0,0.1)]" 
+                   />
+                </div>
               </div>
 
-              {/* Text */}
-              <div className="lg:col-span-7 space-y-8">
-                 <h2 className="text-3xl md:text-4xl font-normal leading-snug tracking-[-0.02em]">
-                    Hello, moi c'est Laurène Watrelot — j'aide les startups à mieux s'occuper de leurs clients grâce à des outils bien pensés.
-                 </h2>
+              {/* Text Column */}
+              <div className="lg:col-span-7 flex flex-col gap-12">
+                 
+                 {/* Intro Text */}
+                 <div>
+                   <h2 className="text-3xl md:text-4xl font-normal leading-snug tracking-[-0.02em] mb-8">
+                      Hello, moi c'est Laurène <span className="text-main/60">— j'aide les startups à mieux s'occuper de leurs clients grâce à des outils bien pensés.</span>
+                   </h2>
 
-                 <div className="space-y-6">
-                    <div className="bg-cream-dark/30 p-6 rounded-lg border border-main/5 hover:bg-cream-dark/50 transition-colors duration-300">
-                       <h3 className="font-medium text-lg mb-2 flex items-center gap-2 tracking-[-0.02em]">
-                          <Users size={18} className="text-main" /> Vision stratégique
-                       </h3>
-                       <p className="text-main/60 text-sm leading-relaxed tracking-[-0.02em]">
-                          Ex-Head of CS et membre du COMEX : je structure vos ops avec une vision globale, pas en silo.
-                       </p>
-                    </div>
+                   <div className="space-y-8">
+                      <div>
+                         <h3 className="font-medium text-sm text-main mb-1 tracking-[-0.02em]">
+                            Vision stratégique
+                         </h3>
+                         <p className="font-medium text-main/60 text-sm leading-relaxed tracking-[-0.02em]">
+                            Ex-Head of CS et membre du COMEX : je structure vos ops avec une vision globale, pas en silo.
+                         </p>
+                      </div>
 
-                    <div className="bg-cream-dark/30 p-6 rounded-lg border border-main/5 hover:bg-cream-dark/50 transition-colors duration-300">
-                       <h3 className="font-medium text-lg mb-2 flex items-center gap-2 tracking-[-0.02em]">
-                          <Settings2 size={18} className="text-main" /> Double casquette métier & technique
-                       </h3>
-                       <p className="text-main/60 text-sm leading-relaxed tracking-[-0.02em]">
-                          Je comprends vos enjeux ET je maîtrise les outils pour construire des solutions qui tiennent dans la durée.
-                       </p>
-                    </div>
+                      <div>
+                         <h3 className="font-medium text-sm text-main mb-1 tracking-[-0.02em]">
+                            Double casquette métier & technique
+                         </h3>
+                         <p className="font-medium text-main/60 text-sm leading-relaxed tracking-[-0.02em]">
+                            Je comprends vos enjeux ET je maîtrise les outils pour construire des solutions qui tiennent dans la durée.
+                         </p>
+                      </div>
 
-                    <div className="bg-cream-dark/30 p-6 rounded-lg border border-main/5 hover:bg-cream-dark/50 transition-colors duration-300">
-                       <h3 className="font-medium text-lg mb-2 flex items-center gap-2 tracking-[-0.02em]">
-                          <BarChart3 size={18} className="text-main" /> Expérience Terrain
-                       </h3>
-                       <p className="text-main/60 text-sm leading-relaxed tracking-[-0.02em]">
-                          J'ai fait grandir une équipe CS du stade pre-seed jusqu'à la série B.
-                       </p>
-                    </div>
+                      <div>
+                         <h3 className="font-medium text-sm text-main mb-1 tracking-[-0.02em]">
+                            Expérience Terrain
+                         </h3>
+                         <p className="font-medium text-main/60 text-sm leading-relaxed tracking-[-0.02em]">
+                            J'ai fait grandir une équipe CS du stade pre-seed jusqu'à la série B.
+                         </p>
+                      </div>
+                   </div>
                  </div>
-              </div>
-           </div>
-        </section>
 
-        {/* --- Conferences & Podcasts --- */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-           
-           <div>
-              <div className="text-xs uppercase tracking-[0.01em] font-medium font-mono text-main/60 mb-4 bg-cream-dark inline-block px-2 py-1 rounded">/ Conférences</div>
-              <div className="space-y-3">
-                 <a href="#" className="block bg-cream-dark p-5 rounded-lg border border-main/5 shadow-sm hover:shadow-md transition-all group">
-                    <h4 className="font-medium text-main group-hover:underline decoration-1 underline-offset-4 transition-all tracking-[-0.02em]">Just For Fun — Quand Le No-Code Ne Se Prend Pas Au Sérieux</h4>
-                    <p className="text-xs text-main/60 mt-2 font-mono">Grande Journée par No-Code France, 2025</p>
-                 </a>
-                 <a href="#" className="block bg-cream-dark p-5 rounded-lg border border-main/5 shadow-sm hover:shadow-md transition-all group">
-                    <div className="flex justify-between items-start">
-                       <h4 className="font-medium text-main group-hover:underline decoration-1 underline-offset-4 transition-all tracking-[-0.02em]">Ne Laissez Pas Les Impayés Freiner Votre Business !</h4>
-                       <MoveUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                    <p className="text-xs text-main/60 mt-2 font-mono">No-Code France, Table Ronde #10, 2023</p>
-                 </a>
-              </div>
-           </div>
+                 {/* Conférences Block */}
+                <div className="bg-cream-dark rounded-xl">
+                  <div className="px-3 py-2">
+                    <div className="text-xs uppercase tracking-[0.01em] font-medium font-mono text-main/60">/ Conférences</div>
+                  </div>
+                  <div className="space-y-1 px-2 pb-2">
+                    <a href="#" className="block bg-white rounded-lg shadow-[0_1px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md transition-all group border border-transparent px-2 py-3">
+                      <div className="flex justify-between items-start">
+                        <h4 className="font-medium text-sm text-main group-hover:underline decoration-1 underline-offset-4 transition-all tracking-[-0.02em]">Just For Fun — Quand Le No‑Code Ne Se Prend Pas Au Sérieux</h4>
+                        <MoveUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-main/60" />
+                      </div>
+                      <p className="text-sm font-medium text-main/60 mt-1 tracking-[-0.02em]">Grande Journée par No‑Code France, 2025</p>
+                    </a>
 
-           <div>
-              <div className="text-xs uppercase tracking-[0.01em] font-medium font-mono text-main/60 mb-4 bg-cream-dark inline-block px-2 py-1 rounded">/ Podcasts</div>
-              <div className="space-y-3">
-                 <a href="#" className="block bg-cream-dark p-5 rounded-lg border border-main/5 shadow-sm hover:shadow-md transition-all group">
-                     <div className="flex justify-between items-start">
-                        <h4 className="font-medium text-main group-hover:underline decoration-1 underline-offset-4 transition-all tracking-[-0.02em]">Déployer Le No-Code Dans Sa Boîte</h4>
-                        <MoveUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                     </div>
-                    <p className="text-xs text-main/60 mt-2 font-mono">No-Code Talks avec Pierre Simonnin, 2023</p>
-                 </a>
-                 <a href="#" className="block bg-cream-dark p-5 rounded-lg border border-main/5 shadow-sm hover:shadow-md transition-all group">
-                     <div className="flex justify-between items-start">
-                        <h4 className="font-medium text-main group-hover:underline decoration-1 underline-offset-4 transition-all tracking-[-0.02em]">Comment Les "No-Code Ops" Impactent Le Service Client En Startup</h4>
-                        <MoveUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                     </div>
-                    <p className="text-xs text-main/60 mt-2 font-mono">Radio Contournement, 2021</p>
-                 </a>
+                    <a href="#" className="block bg-white rounded-lg shadow-[0_1px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md transition-all group border border-transparent px-2 py-3">
+                      <div className="flex justify-between items-start">
+                        <h4 className="font-medium text-sm text-main group-hover:underline decoration-1 underline-offset-4 transition-all tracking-[-0.02em]">Ne Laissez Pas Les Impayés Freiner Votre Business!</h4>
+                        <MoveUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-main/60" />
+                      </div>
+                      <p className="text-sm font-medium text-main/60 mt-1 tracking-[-0.02em]">No‑Code France, Table Ronde #10, 2023</p>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Podcasts Block */}
+                <div className="bg-cream-dark rounded-xl mt-2">
+                  <div className="px-3 py-2">
+                    <div className="text-xs uppercase tracking-[0.01em] font-medium font-mono text-main/60">/ Podcasts</div>
+                  </div>
+                  <div className="space-y-1 px-2 pb-2">
+                    <a href="#" className="block bg-white rounded-lg shadow-[0_1px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md transition-all group border border-transparent px-2 py-3">
+                      <div className="flex justify-between items-start">
+                        <h4 className="font-medium text-sm text-main group-hover:underline decoration-1 underline-offset-4 transition-all tracking-[-0.02em]">Déployer Le No‑Code Dans Sa Boîte</h4>
+                        <MoveUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-main/60" />
+                      </div>
+                      <p className="text-sm font-medium text-main/60 mt-1 tracking-[-0.02em]">No‑Code Talks avec Pierre Simonin, 2023</p>
+                    </a>
+
+                    <a href="#" className="block bg-white rounded-lg shadow-[0_1px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md transition-all group border border-transparent px-2 py-3">
+                      <div className="flex justify-between items-start">
+                        <h4 className="font-medium text-sm text-main group-hover:underline decoration-1 underline-offset-4 transition-all tracking-[-0.02em]">Comment Les "No‑Code Ops" Impactent Le Service Client En Startup</h4>
+                        <MoveUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-main/60" />
+                      </div>
+                      <p className="text-sm font-medium text-main/60 mt-1 tracking-[-0.02em]">Radio Contournement, 2021</p>
+                    </a>
+                  </div>
+                </div>
+
               </div>
            </div>
         </section>
