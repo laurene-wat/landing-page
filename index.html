@@ -24,12 +24,17 @@
               mono: ['Space Mono', 'monospace'],
             },
             animation: {
-              'marquee': 'marquee 80s linear infinite',
+              'marquee': 'marquee 100s linear infinite',
+              'float': 'float 3s ease-in-out infinite',
             },
             keyframes: {
               marquee: {
                 '0%': { transform: 'translateX(0%)' },
                 '100%': { transform: 'translateX(-100%)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(10px)' },
               }
             }
           }

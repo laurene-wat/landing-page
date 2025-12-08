@@ -10,7 +10,7 @@ const Marquee: React.FC = () => {
       {/* Container 1 */}
       <div className="animate-marquee whitespace-nowrap flex-shrink-0 flex items-center">
         {items.map((item, index) => (
-          <span key={`1-${index}`} className="text-[10px] tracking-[0.01em] font-medium font-mono text-main/60 uppercase mx-2">
+          <span key={`1-${index}`} className="text-[9px] tracking-[0.02em] font-medium font-mono text-main/60 uppercase mx-2">
             {item}
           </span>
         ))}
@@ -18,7 +18,7 @@ const Marquee: React.FC = () => {
       {/* Container 2 (Duplicate for seamless loop) */}
       <div className="animate-marquee whitespace-nowrap flex-shrink-0 flex items-center">
         {items.map((item, index) => (
-          <span key={`2-${index}`} className="text-[10px] tracking-[0.01em] font-medium font-mono text-main/60 uppercase mx-2">
+          <span key={`2-${index}`} className="text-[9px] tracking-[0.02em] font-medium font-mono text-main/60 uppercase mx-2">
             {item}
           </span>
         ))}
