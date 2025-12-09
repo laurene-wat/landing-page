@@ -6,11 +6,11 @@ import Button from './components/Button';
 import { MoveUpRight, Mail, BarChart3, TrendingUp, Rocket, Database, Users, MessageSquare, StickyNote, Mic, FileCheck, GraduationCap, LineChart, Sparkles, FileText, ArrowRight, Settings2 } from 'lucide-react';
 import avatarUrl from './assets/images/avatar.jpg';
 import laureneUrl from './assets/images/laurene.jpg';
-import makeUrl from './assets/images/make-full-logo.svg';
-import n8nUrl from './assets/images/n8n-full-logo.svg';
-import vitallyUrl from './assets/images/vitally-full-logo.svg';
-import hubspotUrl from './assets/images/hubspot-full-logo.svg';
-import airtableUrl from './assets/images/airtable-full-logo.svg';
+import makeUrl from './assets/images/make-full-logo.svg?url';
+import n8nUrl from './assets/images/n8n-full-logo.svg?url';
+import vitallyUrl from './assets/images/vitally-full-logo.svg?url';
+import hubspotUrl from './assets/images/hubspot-full-logo.svg?url';
+import airtableUrl from './assets/images/airtable-full-logo.svg?url';
 import zendeskUrl from './assets/images/zendesk-full-logo.png';
 
 const App: React.FC = () => {
