@@ -27,7 +27,7 @@ const App: React.FC = () => {
                 <div className="absolute -inset-1 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-200"></div>
                 <button className="relative flex items-center bg-main text-cream pl-3 pr-6 py-2 rounded-full gap-3 hover:scale-105 transition-transform duration-300 text-left shadow-xl">
                   <img 
-                  src={`${import.meta.env.BASE_URL}images/avatar.jpg`} 
+                  src={`${import.meta.env.BASE_URL}images/thumbnail.jpg`} 
                   alt="Avatar" 
                   className="w-9 h-9 rounded-full border-2 border-cream/20"
                   />
