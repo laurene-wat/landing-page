@@ -448,7 +448,12 @@ const App: React.FC = () => {
                       </p>
                     </div>
 
-                    <a href="#" className="block bg-white rounded-lg shadow-[0_1px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md transition-all group border border-transparent px-2 py-3">
+                    <a
+                      href="https://www.youtube.com/watch?v=gFDxWDAFI74"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block bg-white rounded-lg shadow-[0_1px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md transition-all group border border-transparent px-2 py-3"
+                    >
                       <div className="flex justify-between items-start">
                         <h4 className="font-medium text-sm text-main group-hover:underline decoration-1 underline-offset-4 transition-all tracking-[-0.02em]">Ne Laissez Pas Les Impayés Freiner Votre Business!</h4>
                         <MoveUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-main/60" />
@@ -464,17 +469,27 @@ const App: React.FC = () => {
                     <div className="text-xs uppercase tracking-[0.01em] font-medium font-mono text-main/60">/ Podcasts</div>
                   </div>
                   <div className="space-y-1 px-2 pb-2">
-                    <a href="#" className="block bg-white rounded-lg shadow-[0_1px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md transition-all group border border-transparent px-2 py-3">
+                    <a
+                      href="https://www.youtube.com/watch?v=_LlDxg4E91Y&list=PL51ytdQiZxZi3IRLh5YTUj1SCoqrtUAgV&index=4"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block bg-white rounded-lg shadow-[0_1px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md transition-all group border border-transparent px-2 py-3"
+                    >
                       <div className="flex justify-between items-start">
-                        <h4 className="font-medium text-sm text-main group-hover:underline decoration-1 underline-offset-4 transition-all tracking-[-0.02em]">Déployer Le No‑Code Dans Sa Boîte</h4>
+                        <h4 className="font-medium text-sm text-main group-hover:underline decoration-1 underline-offset-4 transition-all tracking-[-0.02em]">Déployer le No‑Code dans sa boîte</h4>
                         <MoveUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-main/60" />
                       </div>
                       <p className="text-sm font-medium text-main/60 mt-1 tracking-[-0.02em]">No‑Code Talks avec Pierre Simonin, 2023</p>
                     </a>
 
-                    <a href="#" className="block bg-white rounded-lg shadow-[0_1px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md transition-all group border border-transparent px-2 py-3">
+                    <a
+                      href="https://radio.contournement.io/episode/74-laurene-watrelot-comment-les-no-code-ops-impactent-le-service-client-en-startup"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block bg-white rounded-lg shadow-[0_1px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md transition-all group border border-transparent px-2 py-3"
+                    >
                       <div className="flex justify-between items-start">
-                        <h4 className="font-medium text-sm text-main group-hover:underline decoration-1 underline-offset-4 transition-all tracking-[-0.02em]">Comment Les "No‑Code Ops" Impactent Le Service Client En Startup</h4>
+                        <h4 className="font-medium text-sm text-main group-hover:underline decoration-1 underline-offset-4 transition-all tracking-[-0.02em]">Comment les "No‑Code Ops" impactent le Service Client en startup</h4>
                         <MoveUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-main/60" />
                       </div>
                       <p className="text-sm font-medium text-main/60 mt-1 tracking-[-0.02em]">Radio Contournement, 2021</p>
