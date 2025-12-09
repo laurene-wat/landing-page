@@ -485,8 +485,33 @@ const App: React.FC = () => {
 
         {/* --- Footer --- */}
         <footer className="flex justify-center gap-4 pb-12">
-           <Button variant="outline" className="rounded-full px-6 bg-transparent border-main/20 text-main" icon={<MoveUpRight size={14} />}>LinkedIn</Button>
-           <Button variant="outline" className="rounded-full px-6 bg-transparent border-main/20 text-main" icon={<Mail size={14} />}>Mail</Button>
+          <a
+            href="https://www.linkedin.com/in/laurene-watrelot/?isSelfProfile=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full"
+          >
+            <Button
+              variant="outline"
+              className="rounded-full px-6 bg-transparent border-main/20 text-main"
+              icon={<MoveUpRight size={14} />}
+            >
+              LinkedIn
+            </Button>
+          </a>
+        
+          <a
+            href="mailto:contact@laurene-wat.com"
+            className="rounded-full"
+          >
+            <Button
+              variant="outline"
+              className="rounded-full px-6 bg-transparent border-main/20 text-main"
+              icon={<Mail size={14} />}
+            >
+              Mail
+            </Button>
+          </a>
         </footer>
 
       </main>
