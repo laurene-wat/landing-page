@@ -1,5 +1,5 @@
 # .github/workflows/deploy.yml
-name: Build and Deploy (Vite + SSG) to GitHub Pages
+name: Deploy Vite site to GitHub Pages
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
       - name: Install deps
         run: npm install
 
-      - name: Build (Vite + SSG)
+      - name: Build
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: npm run build
