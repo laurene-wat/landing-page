@@ -1,5 +1,5 @@
 # .github/workflows/deploy.yml
-name: Build and Deploy (Vite + Prerender) to GitHub Pages
+name: Build and Deploy (Vite + SSG) to GitHub Pages
 
 on:
   push:
@@ -27,28 +27,18 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Chromium dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            libgtk-3-0 libgbm1 libnss3 libxss1 libasound2 \
-            fonts-liberation libatk-bridge2.0-0 libdrm2 \
-            libxdamage1 libxfixes3 libxcomposite1 libxrandr2
-
       - name: Install deps
         run: npm ci
 
-      - name: Build (Vite) + Prerender
+      - name: Build (Vite + SSG)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "false"
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
-
 
   deploy:
     environment:
