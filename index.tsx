@@ -1,3 +1,4 @@
+// index.tsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -13,3 +14,6 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+// Signal au plugin de pré‑rendu que le DOM est prêt
+document.dispatchEvent(new Event('app-mounted'));
