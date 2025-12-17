@@ -7,27 +7,26 @@ import Prerender from 'vite-plugin-prerender';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
-    server: {
-      port: 3000,
-      host: '0.0.0.0',
-    },
+    server: { port: 3000, host: '0.0.0.0' },
     plugins: [
       react(),
       Prerender({
-        routes: ['/'],                 // On pré‑rend la landing
-        staticDir: 'dist',             // Dossier de sortie Vite
-        renderAfterDocumentEvent: 'app-mounted' // On attend l’événement du DOM
+        routes: ['/'],
+        staticDir: 'dist',
+        renderAfterDocumentEvent: 'app-mounted',
+        rendererOptions: {
+          // Attend que les ressources réseau se calment
+          renderAfterTime: 0,
+          maxConcurrentRoutes: 1
+        },
+        headless: true
       }),
     ],
-    base: '/',                         // OK pour GitHub Pages + CNAME
+    base: '/',
     define: {
       'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '.'),
-      },
-    },
+    resolve: { alias: { '@': path.resolve(__dirname, '.') } },
   };
 });
