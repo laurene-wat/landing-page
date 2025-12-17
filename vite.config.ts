@@ -1,25 +1,26 @@
+// vite.config.ts
 import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
-import StaticPrerender from 'vite-plugin-static-prerender';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
-    server: { port: 3000, host: '0.0.0.0' },
-    plugins: [
-      react(),
-      StaticPrerender({
-        routes: ['/'],      // prérender la landing
-        outDir: 'dist'      // écrit dans dist
-      })
-    ],
+    server: {
+      port: 3000,
+      host: '0.0.0.0',
+    },
+    plugins: [react()],
+    // IMPORTANT: set the base path for GitHub Pages
     base: '/',
     define: {
       'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },
-    resolve: { alias: { '@': path.resolve(__dirname, '.') } },
-    build: { outDir: 'dist', emptyOutDir: true }
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '.'),
+      },
+    },
   };
 });
